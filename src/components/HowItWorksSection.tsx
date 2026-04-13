@@ -1,4 +1,6 @@
 import { UserCheck, TabletSmartphone, ChefHat, CreditCard, Star } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const steps = [
   {
@@ -28,25 +30,77 @@ const steps = [
   },
 ];
 
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const headerVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function HowItWorksSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
   return (
-    <section id="how-it-works" className="relative py-24 md:py-32">
+    <section id="how-it-works" className="relative py-24 md:py-32" ref={ref}>
       <div className="mx-auto max-w-3xl px-6">
-        <div className="mb-16 text-center">
+        <motion.div
+          className="mb-16 text-center"
+          variants={headerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-gold">
             The Journey
           </p>
           <h2 className="font-luxury text-3xl font-bold md:text-5xl">
             An Elegant <span className="gold-text">Service Flow</span>
           </h2>
-        </div>
+        </motion.div>
 
         <div className="relative">
-         
-
-          <div className="space-y-12">
+          <motion.div
+            className="space-y-12"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
             {steps.map((step, i) => (
-              <div key={step.title} className="relative flex items-start gap-6 md:gap-12">
+              <motion.div
+                key={step.title}
+                className="relative flex items-start gap-6 md:gap-12"
+                variants={itemVariants}
+                custom={i}
+              >
                 <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-card text-gold md:mx-auto">
                   <step.icon className="h-5 w-5" />
                   <div className="absolute -inset-1 rounded-full bg-gold/10 animate-glow-pulse" style={{ animationDelay: `${i * 0.5}s` }} />
@@ -58,9 +112,9 @@ export default function HowItWorksSection() {
                   <h3 className="font-luxury text-lg font-semibold">{step.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.desc}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
