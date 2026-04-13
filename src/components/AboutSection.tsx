@@ -14,18 +14,19 @@ export default function AboutSection() {
               Crafting the Future of <span className="gold-text">Hospitality Technology</span>
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Founded with a singular vision — to create technology worthy of the world's finest restaurants. For over 15 years, LuxePOS has partnered with Michelin-starred restaurants, luxury hotel groups, and premium dining establishments across the globe.
+             Clickmasters builds modern POS systems designed specifically for fine dining restaurants, helping brands deliver faster service and smoother customer experiences.
+From busy counters to multi-branch operations, our solutions streamline ordering, improve kitchen coordination, and give restaurant owners full control through smart, scalable technology.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               Our team of hospitality technologists understands that in fine dining, every detail matters. That's why our systems are designed to be invisible to the guest while indispensable to the operation.
             </p>
             <div className="mt-8 flex gap-8">
               <div>
-                <p className="font-luxury text-3xl font-bold text-gold">15+</p>
+                <p className="font-luxury text-3xl font-bold text-gold">8+</p>
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">Years</p>
               </div>
               <div>
-                <p className="font-luxury text-3xl font-bold text-gold">30+</p>
+                <p className="font-luxury text-3xl font-bold text-gold">15+</p>
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">Countries</p>
               </div>
               <div>

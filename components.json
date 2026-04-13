@@ -7,7 +7,15 @@
     "css": "src/styles.css",
     "baseColor": "slate",
     "cssVariables": true,
-    "prefix": ""
+    "prefix": "",
+    "safelist": [
+      "animate-luxury-fade-in",
+      "animate-luxury-fade-in-slow",
+      "animate-hero-zoom",
+      "animate-float",
+      "animate-shimmer",
+      "image-zoom"
+    ]
   },
   "iconLibrary": "lucide",
   "rtl": false,
