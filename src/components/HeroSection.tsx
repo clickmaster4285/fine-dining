@@ -96,13 +96,11 @@ export default function HeroSection() {
         <p className="mb-4 animate-luxury-fade-in text-sm font-medium uppercase tracking-[0.3em] text-gold opacity-0 delay-200">
           Premium Hospitality Technology
         </p>
-        <h1 className="font-luxury animate-luxury-fade-in-slow max-w-4xl text-4xl font-bold leading-tight opacity-0 delay-300 md:text-6xl lg:text-7xl">
+        <h1 className="font-luxury animate-luxury-fade-in-slow max-w-4xl text-4xl font-bold leading-tight opacity-0 delay-300 md:text-4xl lg:text-5xl">
           Elevate Every Dining Experience with{" "}
           <span className="gold-text text-glow">Intelligent Restaurant POS</span>
         </h1>
-        <p className="mt-6 animate-luxury-fade-in max-w-2xl text-lg text-white/90 opacity-0 delay-500 md:text-xl drop-shadow-lg">
-          Seamless service flow. Premium guest experience. Elegant restaurant operations — all powered by one refined system.
-        </p>
+       
         <div className="mt-10 flex animate-luxury-fade-in flex-col gap-4 opacity-0 delay-600 sm:flex-row">
           <a
             href="#contact"
@@ -121,7 +119,7 @@ export default function HeroSection() {
         {/* Stats with Counter */}
         <div className="mt-16 flex animate-luxury-fade-in flex-wrap justify-center gap-8 opacity-0 delay-700 md:gap-12">
           {stats.map((stat) => (
-            <div key={stat.label} className="rounded-xl px-6 py-4 text-center bg-black/20 backdrop-blur-sm border border-gold/20">
+            <div key={stat.label} className="rounded-xl px-6 py-4 text-center ">
               <p className="font-luxury text-2xl font-bold text-gold md:text-3xl">
                 {startCounter ? (
                   <Counter 

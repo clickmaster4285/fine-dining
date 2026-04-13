@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
@@ -27,6 +27,16 @@ export default function TestimonialsSection() {
 
   const prev = () => setCurrent((p) => (p - 1 + testimonials.length) % testimonials.length);
   const next = () => setCurrent((p) => (p + 1) % testimonials.length);
+
+  // Auto-rotate testimonials every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 5000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array means this effect runs once on mount
 
   return (
     <section id="testimonials" className="relative py-24 md:py-32">

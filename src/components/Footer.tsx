@@ -14,10 +14,10 @@ export default function Footer() {
           <div>
             <h4 className="mb-3 text-sm font-semibold uppercase tracking-widest text-gold">Solutions</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#features" className="transition-colors hover:text-foreground">Table Management</a></li>
-              <li><a href="#features" className="transition-colors hover:text-foreground">Reservation Engine</a></li>
-              <li><a href="#features" className="transition-colors hover:text-foreground">Kitchen Display</a></li>
-              <li><a href="#features" className="transition-colors hover:text-foreground">Guest CRM</a></li>
+              <li><a href="#features" className="transition-colors hover:text-foreground">Features</a></li>
+              <li><a href="#solutions" className="transition-colors hover:text-foreground">Solutions</a></li>
+              <li><a href="#how-it-works" className="transition-colors hover:text-foreground">How It Works</a></li>
+            
             </ul>
           </div>
           <div>
