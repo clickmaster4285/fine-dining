@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import fontCss from "../index.css?url";
 
 function NotFoundComponent() {
   return (
@@ -31,20 +32,16 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "LuxePOS — Premium Restaurant POS Solutions" },
+      { name: "description", content: "Elevate every dining experience with intelligent restaurant POS systems designed for fine dining, hotels, and luxury hospitality." },
+      { property: "og:title", content: "LuxePOS — Premium Restaurant POS Solutions" },
+      { property: "og:description", content: "Elevate every dining experience with intelligent restaurant POS systems for fine dining and luxury hospitality." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: fontCss },
+      { rel: "stylesheet", href: appCss },
     ],
   }),
   shellComponent: RootShell,
