@@ -94,7 +94,7 @@ export default function ContactSection() {
                 <div>
                   <p className="font-bold">Address</p>
                   <p className="text-sm text-muted-foreground">
-                    {LOCATION.fullAddress}
+                 Paris Shopping Mall, 4th floor, Main PWD Rd, Islamabad
                   </p>
                 </div>
               </div>
